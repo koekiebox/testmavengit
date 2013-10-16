@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.koekiebox.git-maven-plugin</groupId>
+  <artifactId>test-git-maven-plugin-root</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>Test Maven Git Plugin Root</name>
+  <description>Parent pom providing default setups for all application and admin servers modules</description>
+
+  <repositories>
+    <repository>
+      <id>prime-repo</id>
+      <name>PrimeFaces Maven Repository</name>
+      <url>http://repository.primefaces.org</url>
+      <layout>default</layout>
+    </repository>
+  </repositories>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <!--version.compiler.plugin>2.3.2</version.compiler.plugin>
+    <version.surefire.plugin>2.4.3</version.surefire.plugin-->
+
+    <!-- maven-compiler-plugin -->
+    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.7</maven.compiler.source>
+  </properties>
+
+  <modules>
+    <module>testmavengit</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+
+      <dependency>
+        <groupId>com.koekiebox.git-maven-plugin</groupId>
+        <artifactId>git-maven-plugin</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <scope>provided</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.koekiebox.git-maven-plugin</groupId>
+        <artifactId>git-maven-plugin</artifactId>
+        <version>1.0-SNAPSHOT</version>
+
+        <configuration>
+
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
